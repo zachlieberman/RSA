@@ -1,4 +1,4 @@
-	import java.util.*;
+import java.util.*;
 import java.math.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -680,6 +680,9 @@ public class RSA {
                 boolean result = checkSign(key,plainText,signature);
                 if ( !result )
                     System.out.println("Signatures do not match!");
+                else{
+                	System.out.println("Signatures match!");
+                }
             }
 
             else if ( args[i].equals("-crack") ) {
